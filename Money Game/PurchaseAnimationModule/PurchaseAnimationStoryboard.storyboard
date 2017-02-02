@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BOP-zd-EXg">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Purchase Animation View Controller-->
+        <scene sceneID="WN5-w2-Wwk">
+            <objects>
+                <viewController id="BOP-zd-EXg" customClass="PurchaseAnimationViewController" customModule="Money_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bOS-pT-7Mo"/>
+                        <viewControllerLayoutGuide type="bottom" id="cxD-fH-tlJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JcM-UM-jri">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Barman_Vector" translatesAutoresizingMaskIntoConstraints="NO" id="iiC-k4-8Et">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYg-FD-YrZ">
+                                <rect key="frame" x="30" y="30" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="vhZ-2E-dIt"/>
+                                    <constraint firstAttribute="width" constant="80" id="wws-5w-0O3"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <action selector="backButtonTouched:" destination="BOP-zd-EXg" eventType="touchUpInside" id="uKJ-cX-FdY"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bottle" translatesAutoresizingMaskIntoConstraints="NO" id="ouU-J7-THt">
+                                <rect key="frame" x="60" y="347" width="85" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="9W4-bD-2x7"/>
+                                    <constraint firstAttribute="height" constant="190" id="Q7y-6D-LvD"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iiC-k4-8Et" firstAttribute="top" secondItem="JcM-UM-jri" secondAttribute="top" id="0Yp-cO-YGG"/>
+                            <constraint firstItem="cxD-fH-tlJ" firstAttribute="top" secondItem="iiC-k4-8Et" secondAttribute="bottom" id="Bxj-AB-laN"/>
+                            <constraint firstAttribute="trailing" secondItem="iiC-k4-8Et" secondAttribute="trailing" id="DXm-V4-Ldn"/>
+                            <constraint firstItem="MYg-FD-YrZ" firstAttribute="leading" secondItem="JcM-UM-jri" secondAttribute="leading" constant="30" id="QK3-pX-HoG"/>
+                            <constraint firstItem="ouU-J7-THt" firstAttribute="leading" secondItem="JcM-UM-jri" secondAttribute="leading" constant="60" id="ZF1-ZU-h9C"/>
+                            <constraint firstItem="iiC-k4-8Et" firstAttribute="leading" secondItem="JcM-UM-jri" secondAttribute="leading" id="l2S-PP-AYB"/>
+                            <constraint firstItem="MYg-FD-YrZ" firstAttribute="top" secondItem="JcM-UM-jri" secondAttribute="top" constant="30" id="oLG-7Z-4AA"/>
+                            <constraint firstItem="ouU-J7-THt" firstAttribute="centerY" secondItem="JcM-UM-jri" secondAttribute="centerY" constant="-70" id="pzs-ap-rQQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottleImage" destination="ouU-J7-THt" id="6B5-Th-zzu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5m-Vo-lmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-362.5" y="122.46093749999999"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Barman_Vector" width="3072" height="4098"/>
+        <image name="Bottle" width="237" height="948"/>
+        <image name="backButton" width="282" height="300"/>
+    </resources>
+</document>

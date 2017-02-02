@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lgG-oS-2Ay">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Enter Price View Controller-->
+        <scene sceneID="ARk-rZ-I7Z">
+            <objects>
+                <viewController id="lgG-oS-2Ay" customClass="EnterPriceViewController" customModule="Money_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nGk-uf-NgD"/>
+                        <viewControllerLayoutGuide type="bottom" id="u7M-ws-WDb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hCx-2E-7q0">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enterPricebackground" translatesAutoresizingMaskIntoConstraints="NO" id="xtM-ff-dIV">
+                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nT-61-RdJ">
+                                <rect key="frame" x="30" y="50" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="MGb-fz-uRH"/>
+                                    <constraint firstAttribute="width" constant="80" id="bfV-ZX-UK5"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <action selector="backButton:" destination="lgG-oS-2Ay" eventType="touchUpInside" id="hId-yV-eCm"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bottle" translatesAutoresizingMaskIntoConstraints="NO" id="wyn-nL-tjX">
+                                <rect key="frame" x="316.5" y="500" width="135" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="Ns6-Jq-qDF"/>
+                                    <constraint firstAttribute="height" constant="350" id="Pc3-rg-lll"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="priceLabelImage" translatesAutoresizingMaskIntoConstraints="NO" id="mNj-4m-Twf">
+                                <rect key="frame" x="174" y="814" width="420" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="6jx-RV-x1Y"/>
+                                    <constraint firstAttribute="width" constant="420" id="wQa-sc-qf6"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpArrow" translatesAutoresizingMaskIntoConstraints="NO" id="xgL-ei-xPj">
+                                <rect key="frame" x="324" y="754" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="5mC-nt-LsS"/>
+                                    <constraint firstAttribute="height" constant="120" id="VFG-gM-FyV"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DY6-ao-qxE">
+                                <rect key="frame" x="635" y="891" width="103" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="JQZ-Wx-qst"/>
+                                    <constraint firstAttribute="width" constant="103" id="mcv-o7-6q1"/>
+                                </constraints>
+                                <state key="normal" image="doneButton"/>
+                                <connections>
+                                    <action selector="donebuttonTouched:" destination="lgG-oS-2Ay" eventType="touchUpInside" id="9md-A2-qg3"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand" translatesAutoresizingMaskIntoConstraints="NO" id="lu7-Nj-6Cs">
+                                <rect key="frame" x="110" y="170" width="150" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="KQ4-Mj-NMq"/>
+                                    <constraint firstAttribute="width" constant="150" id="e7y-Vb-YdI"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4R-2m-upC">
+                                <rect key="frame" x="130" y="50" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="DLu-oy-rwV"/>
+                                    <constraint firstAttribute="width" constant="80" id="OhJ-b9-yeV"/>
+                                </constraints>
+                                <state key="normal" image="playSoundButton"/>
+                                <connections>
+                                    <action selector="soundButton:" destination="lgG-oS-2Ay" eventType="touchUpInside" id="C6e-Wt-KrY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xtM-ff-dIV" firstAttribute="leading" secondItem="hCx-2E-7q0" secondAttribute="leading" id="0Bg-XK-YAQ"/>
+                            <constraint firstItem="xgL-ei-xPj" firstAttribute="centerX" secondItem="hCx-2E-7q0" secondAttribute="centerX" id="4CF-hK-lS5"/>
+                            <constraint firstAttribute="trailing" secondItem="DY6-ao-qxE" secondAttribute="trailing" constant="30" id="5TB-pK-BUK"/>
+                            <constraint firstAttribute="bottom" secondItem="xgL-ei-xPj" secondAttribute="bottom" constant="150" id="6uf-p3-DUf"/>
+                            <constraint firstItem="u7M-ws-WDb" firstAttribute="top" secondItem="DY6-ao-qxE" secondAttribute="bottom" constant="30" id="Iq5-gK-fnK"/>
+                            <constraint firstAttribute="bottom" secondItem="wyn-nL-tjX" secondAttribute="bottom" constant="174" id="P4u-KM-L47"/>
+                            <constraint firstItem="4nT-61-RdJ" firstAttribute="leading" secondItem="hCx-2E-7q0" secondAttribute="leading" constant="30" id="QAq-xH-5Nc"/>
+                            <constraint firstItem="xtM-ff-dIV" firstAttribute="top" secondItem="nGk-uf-NgD" secondAttribute="bottom" id="R1m-jt-CRH"/>
+                            <constraint firstAttribute="trailing" secondItem="xtM-ff-dIV" secondAttribute="trailing" id="VNb-ls-GC8"/>
+                            <constraint firstItem="u7M-ws-WDb" firstAttribute="top" secondItem="mNj-4m-Twf" secondAttribute="bottom" constant="60" id="YMS-1u-kzo"/>
+                            <constraint firstItem="q4R-2m-upC" firstAttribute="top" secondItem="nGk-uf-NgD" secondAttribute="bottom" constant="30" id="eUg-To-6O3"/>
+                            <constraint firstItem="lu7-Nj-6Cs" firstAttribute="top" secondItem="nGk-uf-NgD" secondAttribute="bottom" constant="150" id="hoh-z1-aad"/>
+                            <constraint firstItem="u7M-ws-WDb" firstAttribute="top" secondItem="xtM-ff-dIV" secondAttribute="bottom" id="lBs-A9-nwR"/>
+                            <constraint firstItem="4nT-61-RdJ" firstAttribute="top" secondItem="nGk-uf-NgD" secondAttribute="bottom" constant="30" id="mss-Em-agG"/>
+                            <constraint firstItem="q4R-2m-upC" firstAttribute="leading" secondItem="4nT-61-RdJ" secondAttribute="trailing" constant="20" id="qKL-z9-dGG"/>
+                            <constraint firstItem="wyn-nL-tjX" firstAttribute="centerX" secondItem="hCx-2E-7q0" secondAttribute="centerX" id="uCL-2J-aJ5"/>
+                            <constraint firstItem="mNj-4m-Twf" firstAttribute="centerX" secondItem="hCx-2E-7q0" secondAttribute="centerX" id="vqN-7t-jMt"/>
+                            <constraint firstItem="lu7-Nj-6Cs" firstAttribute="leading" secondItem="hCx-2E-7q0" secondAttribute="leading" constant="110" id="wDt-wa-HXa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YUA-jj-LVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="142.57871064467767"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bottle" width="237" height="948"/>
+        <image name="backButton" width="282" height="300"/>
+        <image name="doneButton" width="444" height="447"/>
+        <image name="enterPricebackground" width="1024" height="1366"/>
+        <image name="hand" width="807" height="1380"/>
+        <image name="helpArrow" width="672" height="537"/>
+        <image name="playSoundButton" width="282" height="300"/>
+        <image name="priceLabelImage" width="1740" height="591"/>
+    </resources>
+</document>

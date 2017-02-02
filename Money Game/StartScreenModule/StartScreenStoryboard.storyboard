@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kA2-og-wAT">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start Screen View Controller-->
+        <scene sceneID="drj-Ow-Pey">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="kA2-og-wAT" customClass="StartScreenViewController" customModule="Money_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="beg-yd-11E"/>
+                        <viewControllerLayoutGuide type="bottom" id="k6c-Ma-z0y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DQI-JP-7W5">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="iLf-7w-HKH">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8RH-So-Wqh">
+                                <rect key="frame" x="100" y="440" width="568" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8RH-So-Wqh" secondAttribute="height" multiplier="551:140" id="zF6-hj-ujB"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Play">
+                                            <attributes>
+                                                <color key="NSColor" red="0.4522128807106599" green="0.41282170114978534" blue="0.17069923233099393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="72" name="MarkerFelt-Wide"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="33" minimumLineHeight="50" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonTouched:" destination="kA2-og-wAT" eventType="touchUpInside" id="ev2-p1-Fpb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQm-DP-6c5">
+                                <rect key="frame" x="30" y="50" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1Wg-bo-0Gu"/>
+                                    <constraint firstAttribute="width" constant="100" id="UKE-0t-cko"/>
+                                    <constraint firstAttribute="width" secondItem="xQm-DP-6c5" secondAttribute="height" multiplier="1:1" id="zwr-JL-CjJ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="settingsButton"/>
+                                <connections>
+                                    <action selector="settingsButtonTouched:" destination="kA2-og-wAT" eventType="touchUpInside" id="5vy-WQ-qxX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3P3-f4-mEz">
+                                <rect key="frame" x="638" y="50" width="100" height="100"/>
+                                <state key="normal" image="infoButton"/>
+                                <connections>
+                                    <action selector="infoButtonTouched:" destination="kA2-og-wAT" eventType="touchUpInside" id="Ufk-M3-zxh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8RH-So-Wqh" firstAttribute="centerY" secondItem="DQI-JP-7W5" secondAttribute="centerY" id="42a-Q7-UZF"/>
+                            <constraint firstItem="xQm-DP-6c5" firstAttribute="leading" secondItem="DQI-JP-7W5" secondAttribute="leading" constant="30" id="7Vb-iS-tKx"/>
+                            <constraint firstItem="k6c-Ma-z0y" firstAttribute="top" secondItem="iLf-7w-HKH" secondAttribute="bottom" id="Bxd-8u-BsL"/>
+                            <constraint firstAttribute="trailing" secondItem="3P3-f4-mEz" secondAttribute="trailing" constant="30" id="IpC-eY-6bT"/>
+                            <constraint firstItem="3P3-f4-mEz" firstAttribute="top" secondItem="xQm-DP-6c5" secondAttribute="top" id="L6B-Or-PxC"/>
+                            <constraint firstAttribute="trailing" secondItem="8RH-So-Wqh" secondAttribute="trailing" constant="100" id="NoG-aQ-MIc"/>
+                            <constraint firstItem="xQm-DP-6c5" firstAttribute="top" secondItem="beg-yd-11E" secondAttribute="bottom" constant="30" id="Qlb-TM-Ipr"/>
+                            <constraint firstItem="3P3-f4-mEz" firstAttribute="width" secondItem="xQm-DP-6c5" secondAttribute="width" id="QnF-Cf-K4d"/>
+                            <constraint firstItem="iLf-7w-HKH" firstAttribute="leading" secondItem="DQI-JP-7W5" secondAttribute="leading" id="ZIP-S4-KwE"/>
+                            <constraint firstItem="iLf-7w-HKH" firstAttribute="top" secondItem="DQI-JP-7W5" secondAttribute="top" id="gMH-5v-CHh"/>
+                            <constraint firstItem="3P3-f4-mEz" firstAttribute="height" secondItem="xQm-DP-6c5" secondAttribute="height" id="ke2-Z2-BBs"/>
+                            <constraint firstAttribute="trailing" secondItem="iLf-7w-HKH" secondAttribute="trailing" id="rZk-rQ-Cti"/>
+                            <constraint firstItem="8RH-So-Wqh" firstAttribute="leading" secondItem="DQI-JP-7W5" secondAttribute="leading" constant="100" id="ruO-QM-S1t"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FKg-dk-cQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318.75" y="109.5703125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="2787" height="2691"/>
+        <image name="button" width="984" height="405"/>
+        <image name="infoButton" width="285" height="300"/>
+        <image name="settingsButton" width="285" height="300"/>
+    </resources>
+</document>

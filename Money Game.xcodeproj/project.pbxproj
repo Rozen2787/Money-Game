@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		884C61171E4F0E5C00327AFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C61161E4F0E5C00327AFE /* AppDelegate.swift */; };
+		884C611F1E4F0E5C00327AFE /* Money_Game.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 884C611D1E4F0E5C00327AFE /* Money_Game.xcdatamodeld */; };
+		884C61211E4F0E5C00327AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 884C61201E4F0E5C00327AFE /* Assets.xcassets */; };
+		884C61241E4F0E5C00327AFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 884C61221E4F0E5C00327AFE /* LaunchScreen.storyboard */; };
+		884C612F1E4F0EB500327AFE /* StartScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 884C612E1E4F0EB500327AFE /* StartScreenStoryboard.storyboard */; };
+		884C61311E4F0EC600327AFE /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C61301E4F0EC600327AFE /* StartScreenViewController.swift */; };
+		884C613C1E4F0EC600327AFE /* AlertUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C613B1E4F0EC600327AFE /* AlertUtility.swift */; };
+		88897C2D1E41F8F3007B8E68 /* PickMoneyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88897C2C1E41F8F3007B8E68 /* PickMoneyStoryboard.storyboard */; };
+		88897C2F1E41F902007B8E68 /* PickMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88897C2E1E41F902007B8E68 /* PickMoneyViewController.swift */; };
+		88897C311E41F91D007B8E68 /* PickMoneyRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88897C301E41F91D007B8E68 /* PickMoneyRouting.swift */; };
+		88897C371E420C7A007B8E68 /* MoneySingleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88897C361E420C7A007B8E68 /* MoneySingleModel.swift */; };
+		88897C3E1E421966007B8E68 /* PickMoneyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88897C3C1E421966007B8E68 /* PickMoneyCollectionViewCell.swift */; };
+		88897C3F1E421966007B8E68 /* PickMoneyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88897C3D1E421966007B8E68 /* PickMoneyCollectionViewCell.xib */; };
+		88897C421E421A81007B8E68 /* PickMoneyDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88897C411E421A81007B8E68 /* PickMoneyDataProvider.swift */; };
+		88897C441E423FE7007B8E68 /* KDDragAndDropManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88897C431E423FE7007B8E68 /* KDDragAndDropManager.swift */; };
+		88897C461E424153007B8E68 /* KDDragAndDropCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88897C451E424153007B8E68 /* KDDragAndDropCollectionView.swift */; };
+		88897C491E425912007B8E68 /* 1stepVoice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 88897C481E425912007B8E68 /* 1stepVoice.mp3 */; };
+		88897C4B1E42597A007B8E68 /* AudioPlayerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88897C4A1E42597A007B8E68 /* AudioPlayerUtility.swift */; };
+		88897C4D1E4263D3007B8E68 /* 2stepVoice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 88897C4C1E4263D3007B8E68 /* 2stepVoice.mp3 */; };
+		88897C531E426504007B8E68 /* PurchaseAnimationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88897C521E426504007B8E68 /* PurchaseAnimationStoryboard.storyboard */; };
+		88897C551E42652A007B8E68 /* PurchaseAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88897C541E42652A007B8E68 /* PurchaseAnimationViewController.swift */; };
+		88897C571E42681D007B8E68 /* PurchaseAnimationRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88897C561E42681D007B8E68 /* PurchaseAnimationRouting.swift */; };
+		88897C591E43333E007B8E68 /* 3stepVoice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 88897C581E43333E007B8E68 /* 3stepVoice.mp3 */; };
+		88897C611E43367B007B8E68 /* EnterPriceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88897C601E43367B007B8E68 /* EnterPriceStoryboard.storyboard */; };
+		88897C641E43404E007B8E68 /* EnterPriceRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88897C631E43404E007B8E68 /* EnterPriceRouting.swift */; };
+		88897C661E4342BA007B8E68 /* EnterPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88897C651E4342BA007B8E68 /* EnterPriceViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		884C61131E4F0E5C00327AFE /* Money Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Money Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		884C61161E4F0E5C00327AFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		884C611E1E4F0E5C00327AFE /* Money_Game.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Money_Game.xcdatamodel; sourceTree = "<group>"; };
+		884C61201E4F0E5C00327AFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		884C61231E4F0E5C00327AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		884C61251E4F0E5C00327AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		884C612E1E4F0EB500327AFE /* StartScreenStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartScreenStoryboard.storyboard; sourceTree = "<group>"; };
+		884C61301E4F0EC600327AFE /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		884C613B1E4F0EC600327AFE /* AlertUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertUtility.swift; sourceTree = "<group>"; };
+		88897C2C1E41F8F3007B8E68 /* PickMoneyStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PickMoneyStoryboard.storyboard; sourceTree = "<group>"; };
+		88897C2E1E41F902007B8E68 /* PickMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickMoneyViewController.swift; sourceTree = "<group>"; };
+		88897C301E41F91D007B8E68 /* PickMoneyRouting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickMoneyRouting.swift; sourceTree = "<group>"; };
+		88897C361E420C7A007B8E68 /* MoneySingleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneySingleModel.swift; sourceTree = "<group>"; };
+		88897C3C1E421966007B8E68 /* PickMoneyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickMoneyCollectionViewCell.swift; sourceTree = "<group>"; };
+		88897C3D1E421966007B8E68 /* PickMoneyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickMoneyCollectionViewCell.xib; sourceTree = "<group>"; };
+		88897C411E421A81007B8E68 /* PickMoneyDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickMoneyDataProvider.swift; sourceTree = "<group>"; };
+		88897C431E423FE7007B8E68 /* KDDragAndDropManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDDragAndDropManager.swift; sourceTree = "<group>"; };
+		88897C451E424153007B8E68 /* KDDragAndDropCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDDragAndDropCollectionView.swift; sourceTree = "<group>"; };
+		88897C481E425912007B8E68 /* 1stepVoice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1stepVoice.mp3; sourceTree = "<group>"; };
+		88897C4A1E42597A007B8E68 /* AudioPlayerUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerUtility.swift; sourceTree = "<group>"; };
+		88897C4C1E4263D3007B8E68 /* 2stepVoice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2stepVoice.mp3; sourceTree = "<group>"; };
+		88897C521E426504007B8E68 /* PurchaseAnimationStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PurchaseAnimationStoryboard.storyboard; sourceTree = "<group>"; };
+		88897C541E42652A007B8E68 /* PurchaseAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseAnimationViewController.swift; sourceTree = "<group>"; };
+		88897C561E42681D007B8E68 /* PurchaseAnimationRouting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseAnimationRouting.swift; sourceTree = "<group>"; };
+		88897C581E43333E007B8E68 /* 3stepVoice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 3stepVoice.mp3; sourceTree = "<group>"; };
+		88897C601E43367B007B8E68 /* EnterPriceStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EnterPriceStoryboard.storyboard; sourceTree = "<group>"; };
+		88897C631E43404E007B8E68 /* EnterPriceRouting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPriceRouting.swift; sourceTree = "<group>"; };
+		88897C651E4342BA007B8E68 /* EnterPriceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPriceViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		884C61101E4F0E5C00327AFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		884C610A1E4F0E5C00327AFE = {
+			isa = PBXGroup;
+			children = (
+				884C61151E4F0E5C00327AFE /* Money Game */,
+				884C61141E4F0E5C00327AFE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		884C61141E4F0E5C00327AFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				884C61131E4F0E5C00327AFE /* Money Game.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		884C61151E4F0E5C00327AFE /* Money Game */ = {
+			isa = PBXGroup;
+			children = (
+				88897C5C1E4335E5007B8E68 /* EnterPriceModule */,
+				88897C4E1E4263F5007B8E68 /* PurchaseAnimationModule */,
+				88897C281E41F8C0007B8E68 /* PickMoneyModule */,
+				884C612B1E4F0E8A00327AFE /* StartScreenModule */,
+				884C61321E4F0EC600327AFE /* MoneyGameMainModule */,
+				884C61161E4F0E5C00327AFE /* AppDelegate.swift */,
+				884C61201E4F0E5C00327AFE /* Assets.xcassets */,
+				884C61221E4F0E5C00327AFE /* LaunchScreen.storyboard */,
+				884C61251E4F0E5C00327AFE /* Info.plist */,
+				884C611D1E4F0E5C00327AFE /* Money_Game.xcdatamodeld */,
+			);
+			path = "Money Game";
+			sourceTree = "<group>";
+		};
+		884C612B1E4F0E8A00327AFE /* StartScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				884C612D1E4F0E9700327AFE /* StartScreenControllers */,
+				884C612C1E4F0E9100327AFE /* StartScreenXibs */,
+			);
+			path = StartScreenModule;
+			sourceTree = "<group>";
+		};
+		884C612C1E4F0E9100327AFE /* StartScreenXibs */ = {
+			isa = PBXGroup;
+			children = (
+				884C612E1E4F0EB500327AFE /* StartScreenStoryboard.storyboard */,
+			);
+			name = StartScreenXibs;
+			sourceTree = "<group>";
+		};
+		884C612D1E4F0E9700327AFE /* StartScreenControllers */ = {
+			isa = PBXGroup;
+			children = (
+				884C61301E4F0EC600327AFE /* StartScreenViewController.swift */,
+			);
+			name = StartScreenControllers;
+			sourceTree = "<group>";
+		};
+		884C61321E4F0EC600327AFE /* MoneyGameMainModule */ = {
+			isa = PBXGroup;
+			children = (
+				88897C321E420B24007B8E68 /* MoneyCustomClasses */,
+				884C613A1E4F0EC600327AFE /* MoneyGameUtils */,
+				884C61341E4F0EC600327AFE /* Resources */,
+			);
+			path = MoneyGameMainModule;
+			sourceTree = "<group>";
+		};
+		884C61341E4F0EC600327AFE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				88897C471E4258D2007B8E68 /* Audio */,
+				884C61351E4F0EC600327AFE /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		884C61351E4F0EC600327AFE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		884C613A1E4F0EC600327AFE /* MoneyGameUtils */ = {
+			isa = PBXGroup;
+			children = (
+				884C613B1E4F0EC600327AFE /* AlertUtility.swift */,
+				88897C4A1E42597A007B8E68 /* AudioPlayerUtility.swift */,
+			);
+			name = MoneyGameUtils;
+			sourceTree = "<group>";
+		};
+		88897C281E41F8C0007B8E68 /* PickMoneyModule */ = {
+			isa = PBXGroup;
+			children = (
+				88897C2B1E41F8D6007B8E68 /* PickMoneyRouting */,
+				88897C351E420C61007B8E68 /* PickMoneyModels */,
+				88897C401E421A68007B8E68 /* PickMoneyDataProvider */,
+				88897C381E421920007B8E68 /* PickMoneySubModules */,
+				88897C2A1E41F8CD007B8E68 /* PickMoneyControllers */,
+				88897C291E41F8C3007B8E68 /* PickMoneyXibs */,
+			);
+			path = PickMoneyModule;
+			sourceTree = "<group>";
+		};
+		88897C291E41F8C3007B8E68 /* PickMoneyXibs */ = {
+			isa = PBXGroup;
+			children = (
+				88897C2C1E41F8F3007B8E68 /* PickMoneyStoryboard.storyboard */,
+			);
+			name = PickMoneyXibs;
+			sourceTree = "<group>";
+		};
+		88897C2A1E41F8CD007B8E68 /* PickMoneyControllers */ = {
+			isa = PBXGroup;
+			children = (
+				88897C2E1E41F902007B8E68 /* PickMoneyViewController.swift */,
+			);
+			name = PickMoneyControllers;
+			sourceTree = "<group>";
+		};
+		88897C2B1E41F8D6007B8E68 /* PickMoneyRouting */ = {
+			isa = PBXGroup;
+			children = (
+				88897C301E41F91D007B8E68 /* PickMoneyRouting.swift */,
+			);
+			name = PickMoneyRouting;
+			sourceTree = "<group>";
+		};
+		88897C321E420B24007B8E68 /* MoneyCustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				88897C451E424153007B8E68 /* KDDragAndDropCollectionView.swift */,
+				88897C431E423FE7007B8E68 /* KDDragAndDropManager.swift */,
+			);
+			name = MoneyCustomClasses;
+			sourceTree = "<group>";
+		};
+		88897C351E420C61007B8E68 /* PickMoneyModels */ = {
+			isa = PBXGroup;
+			children = (
+				88897C361E420C7A007B8E68 /* MoneySingleModel.swift */,
+			);
+			name = PickMoneyModels;
+			sourceTree = "<group>";
+		};
+		88897C381E421920007B8E68 /* PickMoneySubModules */ = {
+			isa = PBXGroup;
+			children = (
+				88897C391E421948007B8E68 /* PickMoneyCollectionViewCell */,
+			);
+			name = PickMoneySubModules;
+			sourceTree = "<group>";
+		};
+		88897C391E421948007B8E68 /* PickMoneyCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				88897C3B1E421950007B8E68 /* PickMoneyCollectionViewCellControllers */,
+				88897C3A1E42194A007B8E68 /* PickMoneyCollectionViewCellXibs */,
+			);
+			path = PickMoneyCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		88897C3A1E42194A007B8E68 /* PickMoneyCollectionViewCellXibs */ = {
+			isa = PBXGroup;
+			children = (
+				88897C3D1E421966007B8E68 /* PickMoneyCollectionViewCell.xib */,
+			);
+			name = PickMoneyCollectionViewCellXibs;
+			sourceTree = "<group>";
+		};
+		88897C3B1E421950007B8E68 /* PickMoneyCollectionViewCellControllers */ = {
+			isa = PBXGroup;
+			children = (
+				88897C3C1E421966007B8E68 /* PickMoneyCollectionViewCell.swift */,
+			);
+			name = PickMoneyCollectionViewCellControllers;
+			sourceTree = "<group>";
+		};
+		88897C401E421A68007B8E68 /* PickMoneyDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				88897C411E421A81007B8E68 /* PickMoneyDataProvider.swift */,
+			);
+			name = PickMoneyDataProvider;
+			sourceTree = "<group>";
+		};
+		88897C471E4258D2007B8E68 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				88897C581E43333E007B8E68 /* 3stepVoice.mp3 */,
+				88897C4C1E4263D3007B8E68 /* 2stepVoice.mp3 */,
+				88897C481E425912007B8E68 /* 1stepVoice.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		88897C4E1E4263F5007B8E68 /* PurchaseAnimationModule */ = {
+			isa = PBXGroup;
+			children = (
+				88897C4F1E426413007B8E68 /* PurchaseAnimationRouting */,
+				88897C501E426456007B8E68 /* PurchaseAnimationControllers */,
+				88897C511E426466007B8E68 /* PurchaseAnimationXibs */,
+			);
+			path = PurchaseAnimationModule;
+			sourceTree = "<group>";
+		};
+		88897C4F1E426413007B8E68 /* PurchaseAnimationRouting */ = {
+			isa = PBXGroup;
+			children = (
+				88897C561E42681D007B8E68 /* PurchaseAnimationRouting.swift */,
+			);
+			name = PurchaseAnimationRouting;
+			sourceTree = "<group>";
+		};
+		88897C501E426456007B8E68 /* PurchaseAnimationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				88897C541E42652A007B8E68 /* PurchaseAnimationViewController.swift */,
+			);
+			name = PurchaseAnimationControllers;
+			sourceTree = "<group>";
+		};
+		88897C511E426466007B8E68 /* PurchaseAnimationXibs */ = {
+			isa = PBXGroup;
+			children = (
+				88897C521E426504007B8E68 /* PurchaseAnimationStoryboard.storyboard */,
+			);
+			name = PurchaseAnimationXibs;
+			sourceTree = "<group>";
+		};
+		88897C5C1E4335E5007B8E68 /* EnterPriceModule */ = {
+			isa = PBXGroup;
+			children = (
+				88897C5F1E433620007B8E68 /* EnterPriceXibs */,
+				88897C5E1E43360D007B8E68 /* EnterPriceControllers */,
+				88897C5D1E4335FB007B8E68 /* EnterPriceRouting */,
+			);
+			path = EnterPriceModule;
+			sourceTree = "<group>";
+		};
+		88897C5D1E4335FB007B8E68 /* EnterPriceRouting */ = {
+			isa = PBXGroup;
+			children = (
+				88897C631E43404E007B8E68 /* EnterPriceRouting.swift */,
+			);
+			name = EnterPriceRouting;
+			sourceTree = "<group>";
+		};
+		88897C5E1E43360D007B8E68 /* EnterPriceControllers */ = {
+			isa = PBXGroup;
+			children = (
+				88897C651E4342BA007B8E68 /* EnterPriceViewController.swift */,
+			);
+			name = EnterPriceControllers;
+			sourceTree = "<group>";
+		};
+		88897C5F1E433620007B8E68 /* EnterPriceXibs */ = {
+			isa = PBXGroup;
+			children = (
+				88897C601E43367B007B8E68 /* EnterPriceStoryboard.storyboard */,
+			);
+			name = EnterPriceXibs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		884C61121E4F0E5C00327AFE /* Money Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 884C61281E4F0E5C00327AFE /* Build configuration list for PBXNativeTarget "Money Game" */;
+			buildPhases = (
+				884C610F1E4F0E5C00327AFE /* Sources */,
+				884C61101E4F0E5C00327AFE /* Frameworks */,
+				884C61111E4F0E5C00327AFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Money Game";
+			productName = "Money Game";
+			productReference = 884C61131E4F0E5C00327AFE /* Money Game.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		884C610B1E4F0E5C00327AFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = iMac;
+				TargetAttributes = {
+					884C61121E4F0E5C00327AFE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = H3KJBLVZF8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 884C610E1E4F0E5C00327AFE /* Build configuration list for PBXProject "Money Game" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 884C610A1E4F0E5C00327AFE;
+			productRefGroup = 884C61141E4F0E5C00327AFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				884C61121E4F0E5C00327AFE /* Money Game */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		884C61111E4F0E5C00327AFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88897C591E43333E007B8E68 /* 3stepVoice.mp3 in Resources */,
+				884C612F1E4F0EB500327AFE /* StartScreenStoryboard.storyboard in Resources */,
+				88897C531E426504007B8E68 /* PurchaseAnimationStoryboard.storyboard in Resources */,
+				88897C491E425912007B8E68 /* 1stepVoice.mp3 in Resources */,
+				88897C2D1E41F8F3007B8E68 /* PickMoneyStoryboard.storyboard in Resources */,
+				88897C3F1E421966007B8E68 /* PickMoneyCollectionViewCell.xib in Resources */,
+				884C61241E4F0E5C00327AFE /* LaunchScreen.storyboard in Resources */,
+				88897C4D1E4263D3007B8E68 /* 2stepVoice.mp3 in Resources */,
+				88897C611E43367B007B8E68 /* EnterPriceStoryboard.storyboard in Resources */,
+				884C61211E4F0E5C00327AFE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		884C610F1E4F0E5C00327AFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88897C421E421A81007B8E68 /* PickMoneyDataProvider.swift in Sources */,
+				88897C441E423FE7007B8E68 /* KDDragAndDropManager.swift in Sources */,
+				88897C571E42681D007B8E68 /* PurchaseAnimationRouting.swift in Sources */,
+				884C61311E4F0EC600327AFE /* StartScreenViewController.swift in Sources */,
+				88897C2F1E41F902007B8E68 /* PickMoneyViewController.swift in Sources */,
+				88897C461E424153007B8E68 /* KDDragAndDropCollectionView.swift in Sources */,
+				88897C311E41F91D007B8E68 /* PickMoneyRouting.swift in Sources */,
+				88897C4B1E42597A007B8E68 /* AudioPlayerUtility.swift in Sources */,
+				88897C3E1E421966007B8E68 /* PickMoneyCollectionViewCell.swift in Sources */,
+				88897C661E4342BA007B8E68 /* EnterPriceViewController.swift in Sources */,
+				884C613C1E4F0EC600327AFE /* AlertUtility.swift in Sources */,
+				88897C551E42652A007B8E68 /* PurchaseAnimationViewController.swift in Sources */,
+				88897C371E420C7A007B8E68 /* MoneySingleModel.swift in Sources */,
+				884C611F1E4F0E5C00327AFE /* Money_Game.xcdatamodeld in Sources */,
+				88897C641E43404E007B8E68 /* EnterPriceRouting.swift in Sources */,
+				884C61171E4F0E5C00327AFE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		884C61221E4F0E5C00327AFE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				884C61231E4F0E5C00327AFE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		884C61261E4F0E5C00327AFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		884C61271E4F0E5C00327AFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		884C61291E4F0E5C00327AFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = H3KJBLVZF8;
+				INFOPLIST_FILE = "Money Game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rozen.moneyGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		884C612A1E4F0E5C00327AFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = H3KJBLVZF8;
+				INFOPLIST_FILE = "Money Game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rozen.moneyGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		884C610E1E4F0E5C00327AFE /* Build configuration list for PBXProject "Money Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				884C61261E4F0E5C00327AFE /* Debug */,
+				884C61271E4F0E5C00327AFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		884C61281E4F0E5C00327AFE /* Build configuration list for PBXNativeTarget "Money Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				884C61291E4F0E5C00327AFE /* Debug */,
+				884C612A1E4F0E5C00327AFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		884C611D1E4F0E5C00327AFE /* Money_Game.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				884C611E1E4F0E5C00327AFE /* Money_Game.xcdatamodel */,
+			);
+			currentVersion = 884C611E1E4F0E5C00327AFE /* Money_Game.xcdatamodel */;
+			path = Money_Game.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 884C610B1E4F0E5C00327AFE /* Project object */;
+}

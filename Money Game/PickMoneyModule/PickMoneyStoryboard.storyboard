@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WDd-Gs-x99">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pick Money View Controller-->
+        <scene sceneID="Gne-Hu-X6N">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="WDd-Gs-x99" customClass="PickMoneyViewController" customModule="Money_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rm8-CB-Hax"/>
+                        <viewControllerLayoutGuide type="bottom" id="tTW-7Y-UhZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ziz-G5-BqE">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dadBackground" translatesAutoresizingMaskIntoConstraints="NO" id="8dv-Fb-PyK">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="563"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTD-bo-Ygp">
+                                <rect key="frame" x="130" y="30" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Tc9-4v-25f"/>
+                                    <constraint firstAttribute="height" constant="80" id="y7v-YO-ryR"/>
+                                </constraints>
+                                <state key="normal" image="playSoundButton"/>
+                                <connections>
+                                    <action selector="playSoundButtonTouched:" destination="WDd-Gs-x99" eventType="touchUpInside" id="lLv-Rq-EA8"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poucnBackground" translatesAutoresizingMaskIntoConstraints="NO" id="RBd-eI-d6K">
+                                <rect key="frame" x="0.0" y="563" width="768" height="461"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pouch" translatesAutoresizingMaskIntoConstraints="NO" id="vV9-F9-OwA">
+                                <rect key="frame" x="551" y="845" width="187" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="QoN-Ex-eGm"/>
+                                    <constraint firstAttribute="height" constant="149" id="fHf-c7-ovK"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dadImage" translatesAutoresizingMaskIntoConstraints="NO" id="e4X-aL-urh">
+                                <rect key="frame" x="30" y="170" width="190" height="223"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="ZYw-ST-l2k"/>
+                                    <constraint firstAttribute="height" constant="223" id="tFp-P9-hOj"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUZ-oC-Ano">
+                                <rect key="frame" x="30" y="30" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="H6D-pa-eOd"/>
+                                    <constraint firstAttribute="width" constant="80" id="nXs-hc-7P3"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <action selector="backButtonTouched:" destination="WDd-Gs-x99" eventType="touchUpInside" id="vir-kz-7I3"/>
+                                </connections>
+                            </button>
+                            <collectionView contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4aN-EZ-JgQ" customClass="KDDragAndDropCollectionView" customModule="Money_Game" customModuleProvider="target">
+                                <rect key="frame" x="30" y="593" width="708" height="401"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="W6A-vx-wWh">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="u12-6G-aT8">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <collectionView contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XUI-4f-kb6" customClass="KDDragAndDropCollectionView" customModule="Money_Game" customModuleProvider="target">
+                                <rect key="frame" x="230" y="50" width="508" height="483"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="zZZ-7H-1ta">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wGX-rL-QST">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcS-sc-KNY">
+                                <rect key="frame" x="635" y="891" width="103" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="NWN-hC-Qkd"/>
+                                    <constraint firstAttribute="height" constant="103" id="WzH-Ao-kKJ"/>
+                                </constraints>
+                                <state key="normal" image="doneButton"/>
+                                <connections>
+                                    <action selector="doneButtonTouched:" destination="WDd-Gs-x99" eventType="touchUpInside" id="szL-Lb-JVQ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpArrow" translatesAutoresizingMaskIntoConstraints="NO" id="hoz-dk-JSV">
+                                <rect key="frame" x="414" y="464" width="240" height="196"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="RBA-X5-9Fr"/>
+                                    <constraint firstAttribute="height" constant="196" id="hBq-Be-yO8"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand" translatesAutoresizingMaskIntoConstraints="NO" id="CfV-L1-eZd">
+                                <rect key="frame" x="283.5" y="90" width="201" height="346"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="PHl-oe-UFz"/>
+                                    <constraint firstAttribute="height" constant="346" id="cMl-U8-K23"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8dv-Fb-PyK" firstAttribute="top" secondItem="ziz-G5-BqE" secondAttribute="top" id="0c2-GP-mog"/>
+                            <constraint firstItem="XUI-4f-kb6" firstAttribute="leading" secondItem="e4X-aL-urh" secondAttribute="trailing" constant="10" id="4WA-sf-mex"/>
+                            <constraint firstAttribute="trailing" secondItem="RBd-eI-d6K" secondAttribute="trailing" id="7fM-uq-0og"/>
+                            <constraint firstItem="RBd-eI-d6K" firstAttribute="leading" secondItem="ziz-G5-BqE" secondAttribute="leading" id="8O0-s1-st7"/>
+                            <constraint firstItem="hoz-dk-JSV" firstAttribute="centerX" secondItem="ziz-G5-BqE" secondAttribute="centerX" constant="150" id="D1G-CQ-bOg"/>
+                            <constraint firstItem="NTD-bo-Ygp" firstAttribute="top" secondItem="DUZ-oC-Ano" secondAttribute="top" id="FQb-LU-YSg"/>
+                            <constraint firstItem="4aN-EZ-JgQ" firstAttribute="top" secondItem="8dv-Fb-PyK" secondAttribute="bottom" constant="30" id="GPu-cB-txv"/>
+                            <constraint firstItem="DUZ-oC-Ano" firstAttribute="leading" secondItem="ziz-G5-BqE" secondAttribute="leading" constant="30" id="HZC-49-pwq"/>
+                            <constraint firstAttribute="bottom" secondItem="4aN-EZ-JgQ" secondAttribute="bottom" constant="30" id="IjE-MB-EMz"/>
+                            <constraint firstItem="RBd-eI-d6K" firstAttribute="top" secondItem="8dv-Fb-PyK" secondAttribute="bottom" id="J5l-20-XNX"/>
+                            <constraint firstAttribute="trailing" secondItem="4aN-EZ-JgQ" secondAttribute="trailing" constant="30" id="OLd-Qg-8DC"/>
+                            <constraint firstItem="tTW-7Y-UhZ" firstAttribute="top" secondItem="LcS-sc-KNY" secondAttribute="bottom" constant="30" id="Oyj-hi-rVW"/>
+                            <constraint firstAttribute="trailing" secondItem="8dv-Fb-PyK" secondAttribute="trailing" id="Pp7-Zx-z6A"/>
+                            <constraint firstItem="NTD-bo-Ygp" firstAttribute="leading" secondItem="DUZ-oC-Ano" secondAttribute="trailing" constant="20" id="Pua-5O-4Nv"/>
+                            <constraint firstItem="CfV-L1-eZd" firstAttribute="centerX" secondItem="ziz-G5-BqE" secondAttribute="centerX" id="RiH-Bd-HHE"/>
+                            <constraint firstItem="RBd-eI-d6K" firstAttribute="top" secondItem="XUI-4f-kb6" secondAttribute="bottom" constant="30" id="SML-LH-gBE"/>
+                            <constraint firstAttribute="trailing" secondItem="LcS-sc-KNY" secondAttribute="trailing" constant="30" id="T7L-Qd-Mcd"/>
+                            <constraint firstItem="e4X-aL-urh" firstAttribute="top" secondItem="rm8-CB-Hax" secondAttribute="bottom" constant="150" id="ZsI-Rt-Jnz"/>
+                            <constraint firstItem="tTW-7Y-UhZ" firstAttribute="top" secondItem="RBd-eI-d6K" secondAttribute="bottom" id="bt9-62-wZG"/>
+                            <constraint firstItem="DUZ-oC-Ano" firstAttribute="top" secondItem="ziz-G5-BqE" secondAttribute="top" constant="30" id="h94-gL-ZfJ"/>
+                            <constraint firstItem="RBd-eI-d6K" firstAttribute="height" secondItem="ziz-G5-BqE" secondAttribute="height" multiplier="0.45" id="ibQ-gu-67F"/>
+                            <constraint firstItem="hoz-dk-JSV" firstAttribute="centerY" secondItem="ziz-G5-BqE" secondAttribute="centerY" constant="50" id="kak-u3-NPf"/>
+                            <constraint firstAttribute="trailing" secondItem="XUI-4f-kb6" secondAttribute="trailing" constant="30" id="qQe-67-RhL"/>
+                            <constraint firstItem="tTW-7Y-UhZ" firstAttribute="top" secondItem="vV9-F9-OwA" secondAttribute="bottom" constant="30" id="tp5-ej-33D"/>
+                            <constraint firstItem="4aN-EZ-JgQ" firstAttribute="leading" secondItem="ziz-G5-BqE" secondAttribute="leading" constant="30" id="uK0-bB-ZPM"/>
+                            <constraint firstItem="CfV-L1-eZd" firstAttribute="top" secondItem="rm8-CB-Hax" secondAttribute="bottom" constant="70" id="ueI-sX-LDc"/>
+                            <constraint firstAttribute="trailing" secondItem="vV9-F9-OwA" secondAttribute="trailing" constant="30" id="vam-jo-b02"/>
+                            <constraint firstItem="8dv-Fb-PyK" firstAttribute="leading" secondItem="ziz-G5-BqE" secondAttribute="leading" id="z02-r4-ZVD"/>
+                            <constraint firstItem="XUI-4f-kb6" firstAttribute="top" secondItem="rm8-CB-Hax" secondAttribute="bottom" constant="30" id="zoj-tg-r4v"/>
+                            <constraint firstItem="e4X-aL-urh" firstAttribute="leading" secondItem="ziz-G5-BqE" secondAttribute="leading" constant="30" id="zzy-9d-F9j"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YSJ-rd-3ZT"/>
+                    <connections>
+                        <outlet property="helperArrow" destination="hoz-dk-JSV" id="Pyk-jC-s2S"/>
+                        <outlet property="helperHand" destination="CfV-L1-eZd" id="l7w-9g-dM2"/>
+                        <outlet property="moneyCollectionView" destination="XUI-4f-kb6" id="7hZ-K8-ip1"/>
+                        <outlet property="userMoneyCollectionView" destination="4aN-EZ-JgQ" id="T0Q-Ug-VyE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ciq-fa-J78" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1211.71875" y="130.6640625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backButton" width="282" height="300"/>
+        <image name="dadBackground" width="1459" height="1221"/>
+        <image name="dadImage" width="810" height="1152"/>
+        <image name="doneButton" width="444" height="447"/>
+        <image name="hand" width="807" height="1380"/>
+        <image name="helpArrow" width="672" height="537"/>
+        <image name="playSoundButton" width="282" height="300"/>
+        <image name="pouch" width="1317" height="954"/>
+        <image name="poucnBackground" width="3072" height="3381"/>
+    </resources>
+</document>
