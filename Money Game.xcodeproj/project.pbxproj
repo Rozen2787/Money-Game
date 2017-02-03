@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880798251E4519410022FDAD /* 5stepVoice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 880798241E4519410022FDAD /* 5stepVoice.mp3 */; };
+		8807982B1E45197C0022FDAD /* FinalRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807982A1E45197C0022FDAD /* FinalRouting.swift */; };
+		8807982D1E4519880022FDAD /* FinalStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8807982C1E4519880022FDAD /* FinalStoryboard.storyboard */; };
+		8807982F1E4519970022FDAD /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807982E1E4519970022FDAD /* FinalViewController.swift */; };
 		8833690B1E4364940040FA47 /* EnterPriceSingleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883369091E4364940040FA47 /* EnterPriceSingleCollectionViewCell.swift */; };
 		8833690C1E4364940040FA47 /* EnterPriceSingleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8833690A1E4364940040FA47 /* EnterPriceSingleCollectionViewCell.xib */; };
 		8833690F1E43656A0040FA47 /* EnterPriceDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833690E1E43656A0040FA47 /* EnterPriceDataProvider.swift */; };
@@ -41,6 +45,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		880798241E4519410022FDAD /* 5stepVoice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 5stepVoice.mp3; sourceTree = "<group>"; };
+		8807982A1E45197C0022FDAD /* FinalRouting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalRouting.swift; sourceTree = "<group>"; };
+		8807982C1E4519880022FDAD /* FinalStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FinalStoryboard.storyboard; sourceTree = "<group>"; };
+		8807982E1E4519970022FDAD /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		883369091E4364940040FA47 /* EnterPriceSingleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPriceSingleCollectionViewCell.swift; sourceTree = "<group>"; };
 		8833690A1E4364940040FA47 /* EnterPriceSingleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnterPriceSingleCollectionViewCell.xib; sourceTree = "<group>"; };
 		8833690E1E43656A0040FA47 /* EnterPriceDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPriceDataProvider.swift; sourceTree = "<group>"; };
@@ -87,6 +95,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		880798261E4519530022FDAD /* FinalModule */ = {
+			isa = PBXGroup;
+			children = (
+				880798291E4519670022FDAD /* FinalRouting */,
+				880798281E45195D0022FDAD /* FinalControllers */,
+				880798271E4519570022FDAD /* FinalXibs */,
+			);
+			path = FinalModule;
+			sourceTree = "<group>";
+		};
+		880798271E4519570022FDAD /* FinalXibs */ = {
+			isa = PBXGroup;
+			children = (
+				8807982C1E4519880022FDAD /* FinalStoryboard.storyboard */,
+			);
+			name = FinalXibs;
+			sourceTree = "<group>";
+		};
+		880798281E45195D0022FDAD /* FinalControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8807982E1E4519970022FDAD /* FinalViewController.swift */,
+			);
+			name = FinalControllers;
+			sourceTree = "<group>";
+		};
+		880798291E4519670022FDAD /* FinalRouting */ = {
+			isa = PBXGroup;
+			children = (
+				8807982A1E45197C0022FDAD /* FinalRouting.swift */,
+			);
+			name = FinalRouting;
+			sourceTree = "<group>";
+		};
 		883369041E4364490040FA47 /* EnterPriceSubModules */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +189,7 @@
 		884C61151E4F0E5C00327AFE /* Money Game */ = {
 			isa = PBXGroup;
 			children = (
+				880798261E4519530022FDAD /* FinalModule */,
 				88897C5C1E4335E5007B8E68 /* EnterPriceModule */,
 				88897C4E1E4263F5007B8E68 /* PurchaseAnimationModule */,
 				88897C281E41F8C0007B8E68 /* PickMoneyModule */,
@@ -320,6 +363,7 @@
 		88897C471E4258D2007B8E68 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				880798241E4519410022FDAD /* 5stepVoice.mp3 */,
 				883369131E4514660040FA47 /* 4stepVoice.mp3 */,
 				88897C581E43333E007B8E68 /* 3stepVoice.mp3 */,
 				88897C4C1E4263D3007B8E68 /* 2stepVoice.mp3 */,
@@ -458,6 +502,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8807982D1E4519880022FDAD /* FinalStoryboard.storyboard in Resources */,
 				88897C591E43333E007B8E68 /* 3stepVoice.mp3 in Resources */,
 				8833690C1E4364940040FA47 /* EnterPriceSingleCollectionViewCell.xib in Resources */,
 				884C612F1E4F0EB500327AFE /* StartScreenStoryboard.storyboard in Resources */,
@@ -466,6 +511,7 @@
 				88897C2D1E41F8F3007B8E68 /* PickMoneyStoryboard.storyboard in Resources */,
 				883369141E4514660040FA47 /* 4stepVoice.mp3 in Resources */,
 				88897C3F1E421966007B8E68 /* PickMoneyCollectionViewCell.xib in Resources */,
+				880798251E4519410022FDAD /* 5stepVoice.mp3 in Resources */,
 				884C61241E4F0E5C00327AFE /* LaunchScreen.storyboard in Resources */,
 				88897C4D1E4263D3007B8E68 /* 2stepVoice.mp3 in Resources */,
 				88897C611E43367B007B8E68 /* EnterPriceStoryboard.storyboard in Resources */,
@@ -481,12 +527,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				88897C421E421A81007B8E68 /* PickMoneyDataProvider.swift in Sources */,
+				8807982F1E4519970022FDAD /* FinalViewController.swift in Sources */,
 				88897C441E423FE7007B8E68 /* KDDragAndDropManager.swift in Sources */,
 				88897C571E42681D007B8E68 /* PurchaseAnimationRouting.swift in Sources */,
 				883369121E43802D0040FA47 /* MoneyUserDefaultsUtils.swift in Sources */,
 				884C61311E4F0EC600327AFE /* StartScreenViewController.swift in Sources */,
 				88897C2F1E41F902007B8E68 /* PickMoneyViewController.swift in Sources */,
 				8833690B1E4364940040FA47 /* EnterPriceSingleCollectionViewCell.swift in Sources */,
+				8807982B1E45197C0022FDAD /* FinalRouting.swift in Sources */,
 				88897C461E424153007B8E68 /* KDDragAndDropCollectionView.swift in Sources */,
 				88897C311E41F91D007B8E68 /* PickMoneyRouting.swift in Sources */,
 				88897C4B1E42597A007B8E68 /* AudioPlayerUtility.swift in Sources */,

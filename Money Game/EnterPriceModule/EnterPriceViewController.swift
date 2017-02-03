@@ -238,7 +238,7 @@ class EnterPriceViewController: UIViewController, KDDragAndDropCollectionViewDat
     
     @IBAction func donebuttonTouched(_ sender: Any) {
         if isPriceEntered {
-            
+            FinalRouting.showFinalScreen(fromVC: self)
         } else {
             if !dataProvider.checkIsPriceEntered() {
                 AlertUtility.showAlert(fromVC: self, alertText: "Enter price please")

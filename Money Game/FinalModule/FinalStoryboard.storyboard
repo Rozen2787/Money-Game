@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lfy-hn-Jvn">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Final View Controller-->
+        <scene sceneID="pRP-8c-ehE">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Lfy-hn-Jvn" customClass="FinalViewController" customModule="Money_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wAm-Dr-bQp"/>
+                        <viewControllerLayoutGuide type="bottom" id="war-DP-fbi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uuy-w6-UlZ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lastScreenBackGround" translatesAutoresizingMaskIntoConstraints="NO" id="ISi-xN-uJT">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7y-ne-IJm">
+                                <rect key="frame" x="130" y="30" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="42o-5q-cpG"/>
+                                    <constraint firstAttribute="width" constant="80" id="ztw-dF-QTy"/>
+                                </constraints>
+                                <state key="normal" image="playSoundButton"/>
+                                <connections>
+                                    <action selector="playSoundButtonTouched:" destination="Lfy-hn-Jvn" eventType="touchUpInside" id="I22-t5-MyR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOY-L3-sEw">
+                                <rect key="frame" x="30" y="30" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Lg7-Q1-bIv"/>
+                                    <constraint firstAttribute="height" constant="80" id="tdN-2k-nhn"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <action selector="backButtonTouched:" destination="Lfy-hn-Jvn" eventType="touchUpInside" id="Upt-Ma-eWC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfP-Ly-qZ3">
+                                <rect key="frame" x="635" y="891" width="103" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="4Fs-NC-VGW"/>
+                                    <constraint firstAttribute="width" constant="103" id="esR-tc-GDE"/>
+                                </constraints>
+                                <state key="normal" image="doneButton"/>
+                                <connections>
+                                    <action selector="doneButtonTouched:" destination="Lfy-hn-Jvn" eventType="touchUpInside" id="eyq-ll-WO1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hOY-L3-sEw" firstAttribute="top" secondItem="Uuy-w6-UlZ" secondAttribute="top" constant="30" id="4CO-LM-pHG"/>
+                            <constraint firstItem="ISi-xN-uJT" firstAttribute="leading" secondItem="Uuy-w6-UlZ" secondAttribute="leading" id="4Ls-6s-XZw"/>
+                            <constraint firstItem="hOY-L3-sEw" firstAttribute="leading" secondItem="Uuy-w6-UlZ" secondAttribute="leading" constant="30" id="5AR-qO-US0"/>
+                            <constraint firstAttribute="trailing" secondItem="ISi-xN-uJT" secondAttribute="trailing" id="6Kz-vB-7Jg"/>
+                            <constraint firstItem="L7y-ne-IJm" firstAttribute="top" secondItem="hOY-L3-sEw" secondAttribute="top" id="MKa-cT-n04"/>
+                            <constraint firstItem="ISi-xN-uJT" firstAttribute="top" secondItem="Uuy-w6-UlZ" secondAttribute="top" id="Qyh-MW-hEv"/>
+                            <constraint firstItem="war-DP-fbi" firstAttribute="top" secondItem="ISi-xN-uJT" secondAttribute="bottom" id="UZt-L4-72N"/>
+                            <constraint firstItem="L7y-ne-IJm" firstAttribute="leading" secondItem="hOY-L3-sEw" secondAttribute="trailing" constant="20" id="fyO-XR-ysS"/>
+                            <constraint firstItem="war-DP-fbi" firstAttribute="top" secondItem="BfP-Ly-qZ3" secondAttribute="bottom" constant="30" id="hk9-fK-5lc"/>
+                            <constraint firstAttribute="trailing" secondItem="BfP-Ly-qZ3" secondAttribute="trailing" constant="30" id="k6N-j3-A6b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7zf-NF-KXA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZM0-Hh-a5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1211.71875" y="130.6640625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backButton" width="282" height="300"/>
+        <image name="doneButton" width="444" height="447"/>
+        <image name="lastScreenBackGround" width="1024" height="1366"/>
+        <image name="playSoundButton" width="282" height="300"/>
+    </resources>
+</document>

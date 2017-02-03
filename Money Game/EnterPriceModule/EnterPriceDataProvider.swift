@@ -127,7 +127,7 @@ class EnterPriceDataProvider: NSObject {
             priceArray.append("\(eurosString.characters.first!)")
             priceArray.append("\(eurosString.characters.last!)")
         } else {
-            priceArray.append("0")
+            priceArray.append("")
             priceArray.append("\(euros)")
         }
         
