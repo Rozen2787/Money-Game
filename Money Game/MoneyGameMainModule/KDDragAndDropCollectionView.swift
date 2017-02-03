@@ -22,7 +22,7 @@ import UIKit
 }
 
 class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -34,17 +34,19 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
     
     var isSourceCollectionView: Bool!
     
+    var isNeedToInserRows = true
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-     
+        
     }
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
-    
+        
     }
     
-
+    
     // MARK : KDDraggable
     func canDragAtPoint(_ point : CGPoint) -> Bool {
         
@@ -129,8 +131,10 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
         self.animating = true
         
         self.performBatchUpdates({ () -> Void in
+            if self.isNeedToInserRows {
             
             self.deleteItems(at: [existngIndexPath])
+            }
             
         }, completion: { complete -> Void in
             
@@ -143,7 +147,7 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
     }
     
     // MARK : KDDroppable
-
+    
     func canDropAtRect(_ rect : CGRect) -> Bool {
         
         return (self.indexPathForCellOverlappingRect(rect) != nil)
@@ -154,7 +158,7 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
         var overlappingArea : CGFloat = 0.0
         var cellCandidate : UICollectionViewCell?
         
-
+        
         let visibleCells = self.visibleCells
         if visibleCells.count == 0 {
             return IndexPath(row: 0, section: 0)
@@ -162,7 +166,7 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
         
         if  isHorizontal && rect.origin.x > self.contentSize.width ||
             !isHorizontal && rect.origin.y > self.contentSize.height {
-                
+            
             return IndexPath(row: visibleCells.count - 1, section: 0)
         }
         
@@ -270,28 +274,28 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
         
         if  let existingIndexPath = dragDropDS.collectionView(self, indexPathForDataItem: item),
             let indexPath = self.indexPathForCellOverlappingRect(rect) {
-   
-                if indexPath.item != existingIndexPath.item {
+            
+            if indexPath.item != existingIndexPath.item {
+                
+                dragDropDS.collectionView(self, moveDataItemFromIndexPath: existingIndexPath, toIndexPath: indexPath)
+                
+                self.animating = true
+                
+                self.performBatchUpdates({ () -> Void in
                     
-                    dragDropDS.collectionView(self, moveDataItemFromIndexPath: existingIndexPath, toIndexPath: indexPath)
+                    self.moveItem(at: existingIndexPath, to: indexPath)
                     
-                    self.animating = true
+                }, completion: { (finished) -> Void in
                     
-                    self.performBatchUpdates({ () -> Void in
-                        
-                            self.moveItem(at: existingIndexPath, to: indexPath)
-                        
-                        }, completion: { (finished) -> Void in
-                            
-                            self.animating = false
-                            
-                            self.reloadData()
-                            
-                        })
+                    self.animating = false
                     
-                    self.draggingPathOfCellBeingDragged = indexPath
+                    self.reloadData()
                     
-                }
+                })
+                
+                self.draggingPathOfCellBeingDragged = indexPath
+                
+            }
         }
         
         // Check Paging
@@ -311,9 +315,9 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
     func didMoveOutItem(_ item : AnyObject) -> Void {
         
         guard let dragDropDataSource = self.dataSource as? KDDragAndDropCollectionViewDataSource,
-              let existngIndexPath = dragDropDataSource.collectionView(self, indexPathForDataItem: item) else {
-            
-            return
+            let existngIndexPath = dragDropDataSource.collectionView(self, indexPathForDataItem: item) else {
+                
+                return
         }
         
         dragDropDataSource.collectionView(self, deleteDataItemAtIndexPath: existngIndexPath, item: item)
@@ -324,13 +328,13 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
             
             self.deleteItems(at: [existngIndexPath])
             
-            }, completion: { (finished) -> Void in
-                
-                self.animating = false;
-                
-                self.reloadData()
-                
-            })
+        }, completion: { (finished) -> Void in
+            
+            self.animating = false;
+            
+            self.reloadData()
+            
+        })
         
         
         if let idx = self.draggingPathOfCellBeingDragged {
@@ -357,9 +361,9 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
             
             
         }
-    
+        
         let dragDropDataSource = self.dataSource as! KDDragAndDropCollectionViewDataSource // its guaranteed to have a data source
-
+        
         if self.isSourceCollectionView == true {
             dragDropDataSource.collectionView(self, deleteDataItemAtIndexPath: self.indexPathForCellOverlappingRect(currentInRect!)!, item: item)
             return
@@ -374,9 +378,9 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
             self.animating = true
             
             self.performBatchUpdates({ () -> Void in
-                
-                self.insertItems(at: [indexPath])
-                
+                if self.isNeedToInserRows {
+                    self.insertItems(at: [indexPath])
+                }
             }, completion: { complete -> Void in
                 
                 self.animating = false

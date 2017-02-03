@@ -58,8 +58,8 @@ class PickMoneyViewController: UIViewController, KDDragAndDropCollectionViewData
         helperHand.isHidden = true
         helperArrow.isHidden = true
     }
-    // MARK: - KDDragAndDropCollectionViewDataSource
     
+    // MARK: - KDDragAndDropCollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -154,7 +154,12 @@ class PickMoneyViewController: UIViewController, KDDragAndDropCollectionViewData
     
     
     @IBAction func doneButtonTouched(_ sender: Any) {
-     PurchaseAnimationRouting.showPurchaseAnimationScreen(formVC: self)
+        if dataProvider.getCountOfMoney(isUserData: true) != 0 {
+            dataProvider.saveUsersMoney()
+            PurchaseAnimationRouting.showPurchaseAnimationScreen(formVC: self)
+        } else {
+            AlertUtility.showAlert(fromVC: self, alertText: "Enter your money please")
+        }
     }
     
     

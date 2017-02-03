@@ -9,10 +9,22 @@
 import UIKit
 
 class EnterPriceRouting: NSObject {
+    
     static func showEnterPriceScreen(fromVC:UIViewController){
+        
         let storyboard = UIStoryboard(name: "EnterPriceStoryboard", bundle: nil)
         let vc = storyboard.instantiateInitialViewController() as! EnterPriceViewController
         fromVC.present(vc, animated: true, completion: nil)
+        
+    }
+    
+    static func showEnterPriceSecondStepScreenScreen(fromVC:UIViewController){
+        
+        let storyboard = UIStoryboard(name: "EnterPriceStoryboard", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController() as! EnterPriceViewController
+        vc.isPriceEntered = true
+        fromVC.present(vc, animated: true, completion: nil)
+        
     }
 }
 

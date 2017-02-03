@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8833690B1E4364940040FA47 /* EnterPriceSingleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883369091E4364940040FA47 /* EnterPriceSingleCollectionViewCell.swift */; };
+		8833690C1E4364940040FA47 /* EnterPriceSingleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8833690A1E4364940040FA47 /* EnterPriceSingleCollectionViewCell.xib */; };
+		8833690F1E43656A0040FA47 /* EnterPriceDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833690E1E43656A0040FA47 /* EnterPriceDataProvider.swift */; };
+		883369121E43802D0040FA47 /* MoneyUserDefaultsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883369111E43802D0040FA47 /* MoneyUserDefaultsUtils.swift */; };
+		883369141E4514660040FA47 /* 4stepVoice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 883369131E4514660040FA47 /* 4stepVoice.mp3 */; };
 		884C61171E4F0E5C00327AFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C61161E4F0E5C00327AFE /* AppDelegate.swift */; };
 		884C611F1E4F0E5C00327AFE /* Money_Game.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 884C611D1E4F0E5C00327AFE /* Money_Game.xcdatamodeld */; };
 		884C61211E4F0E5C00327AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 884C61201E4F0E5C00327AFE /* Assets.xcassets */; };
@@ -36,6 +41,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		883369091E4364940040FA47 /* EnterPriceSingleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPriceSingleCollectionViewCell.swift; sourceTree = "<group>"; };
+		8833690A1E4364940040FA47 /* EnterPriceSingleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnterPriceSingleCollectionViewCell.xib; sourceTree = "<group>"; };
+		8833690E1E43656A0040FA47 /* EnterPriceDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPriceDataProvider.swift; sourceTree = "<group>"; };
+		883369111E43802D0040FA47 /* MoneyUserDefaultsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyUserDefaultsUtils.swift; sourceTree = "<group>"; };
+		883369131E4514660040FA47 /* 4stepVoice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4stepVoice.mp3; sourceTree = "<group>"; };
 		884C61131E4F0E5C00327AFE /* Money Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Money Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		884C61161E4F0E5C00327AFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		884C611E1E4F0E5C00327AFE /* Money_Game.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Money_Game.xcdatamodel; sourceTree = "<group>"; };
@@ -77,6 +87,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		883369041E4364490040FA47 /* EnterPriceSubModules */ = {
+			isa = PBXGroup;
+			children = (
+				883369061E4364760040FA47 /* EnterPriceSingleCollectionViewCell */,
+			);
+			name = EnterPriceSubModules;
+			sourceTree = "<group>";
+		};
+		883369061E4364760040FA47 /* EnterPriceSingleCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				883369081E43647D0040FA47 /* EnterPriceSingleCollectionViewCellControllers */,
+				883369071E4364780040FA47 /* EnterPriceSingleCollectionViewCellXibs */,
+			);
+			path = EnterPriceSingleCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		883369071E4364780040FA47 /* EnterPriceSingleCollectionViewCellXibs */ = {
+			isa = PBXGroup;
+			children = (
+				8833690A1E4364940040FA47 /* EnterPriceSingleCollectionViewCell.xib */,
+			);
+			name = EnterPriceSingleCollectionViewCellXibs;
+			sourceTree = "<group>";
+		};
+		883369081E43647D0040FA47 /* EnterPriceSingleCollectionViewCellControllers */ = {
+			isa = PBXGroup;
+			children = (
+				883369091E4364940040FA47 /* EnterPriceSingleCollectionViewCell.swift */,
+			);
+			name = EnterPriceSingleCollectionViewCellControllers;
+			sourceTree = "<group>";
+		};
+		8833690D1E4365550040FA47 /* EnterPriceDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				8833690E1E43656A0040FA47 /* EnterPriceDataProvider.swift */,
+			);
+			name = EnterPriceDataProvider;
+			sourceTree = "<group>";
+		};
 		884C610A1E4F0E5C00327AFE = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +217,7 @@
 			children = (
 				884C613B1E4F0EC600327AFE /* AlertUtility.swift */,
 				88897C4A1E42597A007B8E68 /* AudioPlayerUtility.swift */,
+				883369111E43802D0040FA47 /* MoneyUserDefaultsUtils.swift */,
 			);
 			name = MoneyGameUtils;
 			sourceTree = "<group>";
@@ -268,6 +320,7 @@
 		88897C471E4258D2007B8E68 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				883369131E4514660040FA47 /* 4stepVoice.mp3 */,
 				88897C581E43333E007B8E68 /* 3stepVoice.mp3 */,
 				88897C4C1E4263D3007B8E68 /* 2stepVoice.mp3 */,
 				88897C481E425912007B8E68 /* 1stepVoice.mp3 */,
@@ -312,9 +365,11 @@
 		88897C5C1E4335E5007B8E68 /* EnterPriceModule */ = {
 			isa = PBXGroup;
 			children = (
-				88897C5F1E433620007B8E68 /* EnterPriceXibs */,
-				88897C5E1E43360D007B8E68 /* EnterPriceControllers */,
 				88897C5D1E4335FB007B8E68 /* EnterPriceRouting */,
+				8833690D1E4365550040FA47 /* EnterPriceDataProvider */,
+				883369041E4364490040FA47 /* EnterPriceSubModules */,
+				88897C5E1E43360D007B8E68 /* EnterPriceControllers */,
+				88897C5F1E433620007B8E68 /* EnterPriceXibs */,
 			);
 			path = EnterPriceModule;
 			sourceTree = "<group>";
@@ -404,10 +459,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				88897C591E43333E007B8E68 /* 3stepVoice.mp3 in Resources */,
+				8833690C1E4364940040FA47 /* EnterPriceSingleCollectionViewCell.xib in Resources */,
 				884C612F1E4F0EB500327AFE /* StartScreenStoryboard.storyboard in Resources */,
 				88897C531E426504007B8E68 /* PurchaseAnimationStoryboard.storyboard in Resources */,
 				88897C491E425912007B8E68 /* 1stepVoice.mp3 in Resources */,
 				88897C2D1E41F8F3007B8E68 /* PickMoneyStoryboard.storyboard in Resources */,
+				883369141E4514660040FA47 /* 4stepVoice.mp3 in Resources */,
 				88897C3F1E421966007B8E68 /* PickMoneyCollectionViewCell.xib in Resources */,
 				884C61241E4F0E5C00327AFE /* LaunchScreen.storyboard in Resources */,
 				88897C4D1E4263D3007B8E68 /* 2stepVoice.mp3 in Resources */,
@@ -426,8 +483,10 @@
 				88897C421E421A81007B8E68 /* PickMoneyDataProvider.swift in Sources */,
 				88897C441E423FE7007B8E68 /* KDDragAndDropManager.swift in Sources */,
 				88897C571E42681D007B8E68 /* PurchaseAnimationRouting.swift in Sources */,
+				883369121E43802D0040FA47 /* MoneyUserDefaultsUtils.swift in Sources */,
 				884C61311E4F0EC600327AFE /* StartScreenViewController.swift in Sources */,
 				88897C2F1E41F902007B8E68 /* PickMoneyViewController.swift in Sources */,
+				8833690B1E4364940040FA47 /* EnterPriceSingleCollectionViewCell.swift in Sources */,
 				88897C461E424153007B8E68 /* KDDragAndDropCollectionView.swift in Sources */,
 				88897C311E41F91D007B8E68 /* PickMoneyRouting.swift in Sources */,
 				88897C4B1E42597A007B8E68 /* AudioPlayerUtility.swift in Sources */,
@@ -437,6 +496,7 @@
 				88897C551E42652A007B8E68 /* PurchaseAnimationViewController.swift in Sources */,
 				88897C371E420C7A007B8E68 /* MoneySingleModel.swift in Sources */,
 				884C611F1E4F0E5C00327AFE /* Money_Game.xcdatamodeld in Sources */,
+				8833690F1E43656A0040FA47 /* EnterPriceDataProvider.swift in Sources */,
 				88897C641E43404E007B8E68 /* EnterPriceRouting.swift in Sources */,
 				884C61171E4F0E5C00327AFE /* AppDelegate.swift in Sources */,
 			);

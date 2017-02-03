@@ -53,4 +53,26 @@ class PickMoneyDataProvider: NSObject {
         return moneyData[index]
     }
     
+    func saveUsersMoney() {
+        MoneyUserDefaultsUtils.setUserCurrentMoney(money: self.calculateMoney())
+    }
+    
+    func calculateMoney() -> [String:Int] {
+        var money: [Double:Int] = [:]
+        
+        for item in self.userMoneyData {
+            if money.keys.contains(item.value) {
+                let previousValue = money[item.value]
+                money.updateValue(previousValue! + 1, forKey: item.value)
+            } else {
+                money.updateValue(1, forKey: item.value)
+            }
+        }
+        
+        var moneyDictionary: [String:Int] = [:]
+        for key in money.keys {
+            moneyDictionary.updateValue(money[key]!, forKey: String(key))
+        }
+        return moneyDictionary
+    }
 }
